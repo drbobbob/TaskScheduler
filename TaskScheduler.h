@@ -32,6 +32,11 @@ public:
      */
     void run();
 
+    /*
+     * Runs a single iteration of the scheduler (needed for ESP8266 loop())
+     */
+    void runOnce();
+
 private:
     Task **tasks;   // Array of task pointers.
     int numTasks;   // Number of tasks in the array.
